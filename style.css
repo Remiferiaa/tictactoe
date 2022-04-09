@@ -1,0 +1,93 @@
+:root {
+    font-size: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-color: rgb(89, 124, 155);
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    gap: 24px;
+    width: 40vw;
+    background-color: rgb(27, 100, 100);   
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+}
+
+.header {
+    font-weight: bold;
+    font-size: 2rem;
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 100%;
+    border-bottom: 2px solid black;
+}   
+
+.winnerMsg {
+    font-size: 2rem;
+    height: 4rem;
+    font-style: italic;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 150px);
+}
+
+.cells {
+    height: 150px;
+    width: 150px;
+    font-size: 60px;
+    border: none;
+    background-color: transparent;
+}
+
+.cells:nth-child(5) {
+    border: 4px solid black;
+}
+
+.cells:nth-child(2), .cells:nth-child(8) {
+    border-left: 4px solid black;
+    border-right: 4px solid black ;
+}
+
+.cells:nth-child(4), .cells:nth-child(6) {
+    border-top: 4px solid black ;
+    border-bottom: 4px solid black ;
+}
+
+.restart {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+    width: 8rem;
+    height: 3rem;
+    font-weight: bold;
+    color: white;
+    background-color: black;
+    border: none;
+}
+
+.restart:hover,
+.cells:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.restart:active {
+    transform: scale(0.95);
+}
